@@ -1,0 +1,23 @@
+server:
+  port: 8001
+
+spring:
+  application:
+    name: provider-server
+  main:
+    allow-bean-definition-overriding: true
+
+eureka:
+  client:
+    serviceUrl:
+#      defaultZone: http://localhost:7001/eureka/ #客户端注册进Eureka服务列表内
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+  instance:
+    instance-id: provider-8001 #Eureka注册服务显示名
+    prefer-ip-address: true #访问路径可以显示IP地址
+info:
+  app.name: springcloud-provider-8001
+  company.name: www.murong.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
+
