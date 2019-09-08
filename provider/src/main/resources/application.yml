@@ -1,6 +1,9 @@
 server:
   port: 8001
-
+  tomcat:
+    uri-encoding: UTF-8
+  servlet:
+    context-path: /provider
 spring:
   application:
     name: provider-server
@@ -20,4 +23,3 @@ info:
   company.name: www.murong.com
   build.artifactId: $project.artifactId$
   build.version: $project.version$
-
